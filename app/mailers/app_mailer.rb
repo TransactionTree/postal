@@ -7,13 +7,13 @@ class AppMailer < ApplicationMailer
 
   def new_user(user)
     @user = user
-    mail to: @user.email_address, subject: "Welcome to Postal"
+    mail to: @user.email_address, subject: "Welcome to Lynxs"
   end
 
   def user_invite(user_invite, organization)
     @user_invite = user_invite
     @organization = organization
-    mail to: @user_invite.email_address, subject: "Access the #{organization.name} organization on Postal"
+    mail to: @user_invite.email_address, subject: "Access the #{organization.name} organization on Lynxs"
   end
 
   def verify_domain(domain, email_address, user)
@@ -26,7 +26,7 @@ class AppMailer < ApplicationMailer
   def password_reset(user, return_to = nil)
     @user = user
     @return_to = return_to
-    mail to: @user.email_address, subject: "Reset your Postal password"
+    mail to: @user.email_address, subject: "Reset your Lynxs password"
   end
 
   def server_send_limit_approaching(server)

@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
       end
     end
     @message.subject = "Test Message at #{Time.zone.now.to_s(:long)}"
-    @message.plain_body = "This is a message to test the delivery of messages through Postal."
+    @message.plain_body = "This is a message to test the delivery of messages through Lynxs."
   end
 
   def create
